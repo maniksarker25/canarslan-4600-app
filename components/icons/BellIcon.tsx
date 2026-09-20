@@ -1,0 +1,36 @@
+import Svg, { Path } from 'react-native-svg';
+import type { SvgProps } from 'react-native-svg';
+import { StyleProp, ViewStyle } from 'react-native';
+
+type IconProps = SvgProps & {
+  size?: number;
+  color?: string;
+  style?: StyleProp<ViewStyle>;
+};
+
+export function BellIcon({ size = 24, color = '#000', style, ...props }: IconProps) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" style={style} {...props}>
+      <Path
+        d="M12 6.43994V9.76994"
+        stroke={color}
+        strokeWidth="1.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+      />
+      <Path
+        d="M12.02 2C8.33999 2 5.35999 4.98 5.35999 8.66V10.76C5.35999 11.44 5.07999 12.46 4.72999 13.04L3.45999 15.16C2.67999 16.47 3.21999 17.93 4.65999 18.41C9.43999 20 14.61 20 19.39 18.41C20.74 17.96 21.32 16.38 20.59 15.16L19.32 13.04C18.97 12.46 18.69 11.43 18.69 10.76V8.66C18.68 5 15.68 2 12.02 2Z"
+        stroke={color}
+        strokeWidth="1.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+      />
+      <Path
+        d="M15.33 18.8201C15.33 20.6501 13.83 22.1501 12 22.1501C11.09 22.1501 10.25 21.7701 9.65001 21.1701C9.05001 20.5701 8.67001 19.7301 8.67001 18.8201"
+        stroke={color}
+        strokeWidth="1.5"
+        strokeMiterlimit="10"
+      />
+    </Svg>
+  );
+}
